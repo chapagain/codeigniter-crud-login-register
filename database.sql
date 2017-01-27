@@ -28,3 +28,23 @@ INSERT INTO `news` (`id`, `title`, `slug`, `text`, `user_id`) VALUES
 (1, 'Test', 'test', 'Hello World !!', 1),
 (2, 'What is Lorem Ipsum?', 'what-is-lorem-ipsum', 'Lorem Ipsum is simply dummy text.', 1),
 (3, 'My test', 'my-test', 'hello there', 2);
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY_KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`  
+  ADD UNIQUE KEY `user_email_unique` (`email`);

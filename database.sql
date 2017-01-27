@@ -39,7 +39,7 @@ CREATE TABLE `user` (
   `lastname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `updated_at`varchar(255) NULL DEFAULT NULL,
   PRIMARY_KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
